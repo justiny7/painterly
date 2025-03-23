@@ -13,7 +13,6 @@ Painterly is an innovative Blender add-on that bridges this gap by:
 - Algorithmically replicating the hand-painting process
 - Providing artist-friendly controls for consistent style
 - Maintaining the efficiency of automated solutions
-- Delivering production-ready, appealing results
   
 <img width="1134" alt="IMG_7275" src="https://github.com/user-attachments/assets/73cf426d-5e23-4cc6-98e7-579b0ffb77e5" />
 <img width="872" alt="IMG_7960" src="https://github.com/user-attachments/assets/0d87ba92-f6d7-4ce9-98cf-79c07a4236b2" />
@@ -22,7 +21,7 @@ Painterly is an innovative Blender add-on that bridges this gap by:
 
 ### Technical Approach
 Our solution combines several advanced techniques:
-- **Brush Stroke Analysis**: Developed sophisticated algorithms for natural brush stroke generation and placement
+- **Brush Stroke Analysis**: Developed algorithms for natural brush stroke generation and placement
 - **Contour-Guided System**: Uses mesh geometry and normal maps to guide stroke direction and density
 - **UV-Space Optimization**: Intelligent handling of UV space for consistent texture density
 - **Normal Map Enhancement**: Custom normal map generation for enhanced depth and detail
@@ -30,16 +29,13 @@ Our solution combines several advanced techniques:
 ### Key Technical Features
 1. **Smart Stroke Generation**
    - Intelligent stroke placement based on surface features
-   - Customizable stroke parameters (width, length, pressure, angle)
+   - Customizable stroke parameters (width, length, angle, color variation)
 
 2. **Advanced Texture Processing**
    - Multi-layer texture handling
    - Automatic UV space analysis
    - Edge detection and preservation
    - Normal map generation and enhancement
-
-3. **Performance Optimization**
-   - Efficient memory management
 
 We've created a sweet spot between fully manual texture painting and completely automated AI generation, giving artists the best of both worlds.
 
