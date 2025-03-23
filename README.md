@@ -81,17 +81,9 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 3. Enable developer extras in Blender preferences
 4. Install required dependencies (NumPy)
 
-## 📄 License
-MIT License - feel free to use in personal and commercial projects.
-
 ## 🙏 Acknowledgments
 - Built at the Kaedim Hackathon 2025
 - Thanks to the Blender community for support and inspiration
-- Special thanks to Kaedim for hosting the hackathon
 
 ## 📞 Support
 - Create an issue on GitHub for bug reports
-- Join our Discord community for discussions
-- Check the wiki for detailed documentation
-
-Built with ❤️ at the Kaedim Hackathon 2025
