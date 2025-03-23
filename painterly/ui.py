@@ -49,7 +49,6 @@ class PAINTERLY_PT_main_panel(Panel):
         col = row.column(align=True)
         col.scale_x = 0.5
         col.operator("painterly.reset_threshold", text="Reset", icon='LOOP_BACK')
-        box.label(text=f"Current value: {props.normal_angle_threshold:.1f}°")
         
         # Color Variation (single value)
         box = layout.box()

@@ -95,13 +95,8 @@ Here are some examples of our painterly effects:
 
 ## 🚀 Getting Started
 
-### System Requirements
-- Blender 2.93 or higher
-- 8GB RAM minimum (16GB recommended)
-- Graphics card with OpenGL 4.5 support
-
 ### Installation
-1. Download the latest release
+1. Clone repository and zip /painterly file OR download painterly.zip
 2. In Blender:
    - Navigate to Edit > Preferences > Add-ons
    - Click "Install" and select the downloaded `painterly.zip`
@@ -109,11 +104,13 @@ Here are some examples of our painterly effects:
 3. Access Painterly in the N-panel (press N)
 
 ### Quick Start Guide
-1. Select your 3D model
-2. Open Painterly panel (N-panel)
-3. Choose a preset or adjust parameters
-4. Click "Apply" to generate effect
-5. Fine-tune as needed
+1. Open Blender (from command line is recommended for progress logs)
+2. Select your 3D model
+3. Open Painterly panel (N-panel)
+4. Choose a preset or adjust parameters
+5. Click "Apply" to generate effect
+6. In Shading tab, create normal map + Image texture blocks and connect to Principle BSDF (or replace existing normal map with generated map)
+7. Fine-tune as needed
 
 ## ⚙️ Parameter Guide
 
@@ -122,39 +119,5 @@ Here are some examples of our painterly effects:
 |-----------|---------|-------------|
 | Width | 30-50 | Controls stroke width variation |
 | Length | 40-80 | Determines stroke length range |
-| Angle | 45° | Sets directional variation |
-| Edge Noise | 2.0 | Adds natural edge variation |
-| Sparsity | 0.001 | Controls stroke density |
-
-### Advanced Options
-- **UV Scale**: Adjust stroke size relative to UV space
-- **Normal Strength**: Control the depth effect
-- **Seed**: Change randomization pattern
-- **Quality Steps**: Balance speed vs. quality
-
-## 💡 Pro Tips
-1. Start with presets to understand parameter effects
-2. Use lower sparsity for detailed areas
-3. Combine multiple passes for complex effects
-4. Save your favorite parameters as custom presets
-5. Enable backface culling for better performance
-
-## 🔧 Development
-
-### Setup Development Environment
-```bash
-# Clone repository
-git clone https://github.com/your-username/painterly.git
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Link to Blender addons directory
-## Windows
-mklink /D "%APPDATA%\Blender Foundation\Blender\<version>\scripts\addons\painterly" "path\to\painterly"
-
-## macOS/Linux
-ln -s /path/to/painterly ~/Library/Application\ Support/Blender/<version>/scripts/addons/painterly
-```
-
-@ Kaedim Hackathon 2025
+| Theshold Angle | 10° | Threshold angle between faces to paint over edge |
+| Color Variation | 0.0 | Adds slight color variation to texture map |

@@ -12,28 +12,20 @@ class PAINTERLY_OT_apply_effect(Operator):
         scene = context.scene
         props = scene.painterly_props
         
-        # Get parameters from the UI
+        # UI parameters
         if not context.selected_objects:
             self.report({'ERROR'}, "No objects selected. Please select at least one object.")
             return {'CANCELLED'}
             
-        # Validate min/max values
         props.update_min_max(context)
         
-        # Get the normal angle threshold from the internal property
         normal_angle = props.normal_angle_internal
-        
-        # Extra validation to ensure the angle is in range
         if normal_angle > 180.0 or normal_angle < 0.0:
             normal_angle = 10.0
             props.normal_angle_internal = 10.0
             self.report({'WARNING'}, f"Correcting abnormal threshold value to 10.0 degrees")
         
         try:
-            # Debug print
-            print(f"DEBUG - Using normal angle threshold: {normal_angle} degrees")
-            
-            # Call the actual painterly effect function
             painterly_core.create_painterly_maps_with_shared_texture(
                 stroke_width_range=(props.stroke_width[0], props.stroke_width[1]),
                 stroke_length_range=(props.stroke_length[0], props.stroke_length[1]),
@@ -45,6 +37,7 @@ class PAINTERLY_OT_apply_effect(Operator):
             return {'FINISHED'}
         except Exception as e:
             self.report({'ERROR'}, f"Error applying painterly effect: {str(e)}")
+
             import traceback
             traceback.print_exc()
             return {'CANCELLED'}
