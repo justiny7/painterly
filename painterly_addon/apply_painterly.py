@@ -1,27 +1,18 @@
-bl_info = {
-    "name": "Painterly Add-on",
-    "author": "Stanford Team",
-    "version": (1, 0),
-    "blender": (2, 80, 0),  # Works in Blender 2.8 and up
-    "location": "View3D > Sidebar > Painterly",
-    "description": "An add-on with painterly stylization parameters",
-    "category": "3D View",
-}
-
 import bpy
+from . import brush_normal_with_texture
 
 # Property Group for brush parameters and live preview toggle
 class PainterlyProperties(bpy.types.PropertyGroup):
     brush_width: bpy.props.FloatProperty(
         name="Brush Width",
-        default=0.0,
+        default=10.0,
         min=0.0,
         update=lambda self, context: trigger_live_preview(self, context)
     )
 
     brush_length: bpy.props.FloatProperty(
         name="Brush Length",
-        default=0.0,
+        default=20.0,
         min=0.0,
         update=lambda self, context: trigger_live_preview(self, context)
     )
@@ -42,11 +33,6 @@ class PainterlyProperties(bpy.types.PropertyGroup):
         update=lambda self, context: trigger_live_preview(self, context)
     )
 
-    live_preview: bpy.props.BoolProperty(
-        name="Live Preview",
-        default=False
-    )
-
 # Panel for UI
 class PT_PainterlyPanel(bpy.types.Panel):
     bl_label = "Painterly"
@@ -63,8 +49,9 @@ class PT_PainterlyPanel(bpy.types.Panel):
         layout.prop(props, "brush_length")
         layout.prop(props, "brush_rotation")
         layout.prop(props, "angle_variation")
-        layout.prop(props, "live_preview")
-
+        
+        layout.separator()
+        
         layout.operator("painterly.apply")
         layout.operator("painterly.reset")
 
@@ -76,8 +63,30 @@ class OT_ApplyPainterly(bpy.types.Operator):
 
     def execute(self, context):
         # Placeholder for stylization logic
-        self.report({'INFO'}, "Painterly applied.")
+#        self.report({'INFO'}, "Painterly applied.")
+#        return {'FINISHED'}
+    
+        props = context.scene.painterly_props
+        
+        # Skip processing if width or length is zero
+        if props.brush_width <= 0 or props.brush_length <= 0:
+            self.report({'INFO'}, "Brush width or length is zero - no strokes applied.")
+            return {'FINISHED'}
+        
+        width_value = int(props.brush_width)
+        length_value = int(props.brush_length)
+        
+        # Call the generate function with UI parameters
+#        brush_normal.create_complete_coverage_painterly_maps(
+        brush_normal_with_texture.create_complete_coverage_painterly_maps(
+            stroke_width_range=(width_value, width_value),
+            stroke_length_range=(length_value, length_value)
+        )
+        
+        self.report({'INFO'}, "Painterly applied with width: {:.1f}, length: {:.1f}".format(
+            props.brush_width, props.brush_length))
         return {'FINISHED'}
+    
 
 # Operator to reset to original maps
 class OT_ResetPainterly(bpy.types.Operator):
@@ -88,12 +97,6 @@ class OT_ResetPainterly(bpy.types.Operator):
         # Placeholder for reset logic
         self.report({'INFO'}, "Textures reset to original.")
         return {'FINISHED'}
-
-# Triggered when any param is changed
-def trigger_live_preview(self, context):
-    if self.live_preview:
-        print("Live preview triggered")
-        # Call your stylization update function here later
 
 
 # Register
@@ -113,6 +116,3 @@ def unregister():
     for cls in reversed(classes):
         bpy.utils.unregister_class(cls)
     del bpy.types.Scene.painterly_props
-
-if __name__ == "__main__":
-    register()
