@@ -23,10 +23,10 @@ Painterly is a Blender add-on that bridges this gap by providing an intuitive in
 ## 🚀 Quick Start
 
 ### Installation
-1. Download the latest release from GitHub
+1. Download the latest release from the [GitHub Releases page](https://github.com/yourusername/painterly/releases)
 2. In Blender, go to Edit > Preferences > Add-ons
 3. Click "Install" and select the downloaded .zip file
-4. Enable the "Painterly" add-on
+4. Enable the "Painterly" add-on by checking the box next to its name
 
 ### Basic Usage
 1. Select your 3D model in Blender
@@ -77,13 +77,34 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ### Development Setup
 1. Clone the repository
-2. Link the addon to Blender's addon directory
-3. Enable developer extras in Blender preferences
-4. Install required dependencies (NumPy)
+   
+3. Link the addon to Blender's addon directory:
+- Windows: `%APPDATA%\Blender Foundation\Blender\<version>\scripts\addons`
+- macOS: `~/Library/Application Support/Blender/<version>/scripts/addons`
+- Linux: `~/.config/blender/<version>/scripts/addons`
+
+You can create a symbolic link or copy the `painterly` folder to this directory.
+
+3. Enable developer extras in Blender preferences:
+- Go to Edit > Preferences > Interface
+- Check the box next to "Developer Extras"
+
+4. Install required dependencies:
+- Open Blender's built-in text editor
+- Create a new file and paste the following:
+  ```python
+  import subprocess
+  import sys
+  import os
+
+  python_exe = os.path.join(sys.prefix, 'bin', 'python.exe')
+  subprocess.call([python_exe, "-m", "ensurepip"])
+  subprocess.call([python_exe, "-m", "pip", "install", "numpy"])
+  ```
+- Run the script to install NumPy
+
+5. Restart Blender and enable the Painterly add-on in Edit > Preferences > Add-ons
 
 ## 🙏 Acknowledgments
 - Built at the Kaedim Hackathon 2025
 - Thanks to the Blender community for support and inspiration
-
-## 📞 Support
-- Create an issue on GitHub for bug reports
