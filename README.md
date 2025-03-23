@@ -63,13 +63,12 @@ Here are some examples of our painterly effects:
 *Normal Map with Painterly Effect*
 
 ### Suzanne Model
-![Suzanne Results](results/painterly_suzanne/color_map_painterly.png)
+![Suzanne Results](results/painterly_suzanne/normal_map_painterly.png)
 *Classic Blender Suzanne with Painterly Effect*
 
 ## 🌟 Why Painterly?
 - 🚀 **Instant Artistic Transformation**: Convert standard 3D models into painterly masterpieces
 - 🎨 **Artist-Friendly Interface**: No programming knowledge required
-- 🛠️ **Professional-Grade Results**: Production-ready output with PBR workflow support
 - ⚡ **Efficient Workflow**: Reduce production time from days to minutes
 
 ## 🎮 Features
@@ -78,25 +77,11 @@ Here are some examples of our painterly effects:
 - 🖌️ Customizable brush parameters for unique styles
 - 🌈 Enhanced normal maps for stunning 2.5D effects
 - 🔍 Detail preservation with intelligent stroke placement
-- 🧬 Seamless UV space handling
-
-### Technical Excellence
-- ⚙️ PBR workflow compatibility
-- 📐 Advanced normal map generation
-- 🔲 Smart edge detection and handling
-- 🎯 Object-aware stroke placement
-
-### Lessons Learned
-- Discovered that combining traditional graphics techniques with modern tools yields superior results
-- Gained deep understanding of texture generation pipelines
-- Learned the importance of user-centric design in technical tools
-- Realized that sometimes simpler, more controlled approaches outperform complex AI solutions
-- Developed appreciation for the balance between automation and artistic control
 
 ## 🚀 Getting Started
 
 ### Installation
-1. Clone repository and zip /painterly file OR download painterly.zip
+1. Clone repository and zip /painterly directory OR download painterly.zip
 2. In Blender:
    - Navigate to Edit > Preferences > Add-ons
    - Click "Install" and select the downloaded `painterly.zip`
