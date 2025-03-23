@@ -65,9 +65,9 @@ Here are some examples of our painterly effects:
 ![Helmet Normal Map](results/painterly_helmet_color/normal_map_painterly.png)
 *Normal Map with Painterly Effect*
 
-### Suzanne Model
+### Elephant Model
 ![Suzanne Results](results/painterly_suzanne/color_map_painterly.png)
-*Classic Blender Suzanne with Painterly Effect*
+*Classic Blender Elephant with Painterly Effect*
 
 ## 🌟 Why Painterly?
 - 🚀 **Instant Artistic Transformation**: Convert standard 3D models into painterly masterpieces in minutes
