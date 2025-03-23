@@ -23,9 +23,9 @@ Painterly is a Blender add-on that bridges this gap by providing an intuitive in
 ## 🚀 Quick Start
 
 ### Installation
-1. Download the latest release from the [GitHub Releases page](https://github.com/yourusername/painterly/releases)
+1. Download the latest release
 2. In Blender, go to Edit > Preferences > Add-ons
-3. Click "Install" and select the downloaded .zip file
+3. Click "Install" and select the downloaded painterly.zip file
 4. Enable the "Painterly" add-on by checking the box next to its name
 
 ### Basic Usage
