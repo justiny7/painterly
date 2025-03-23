@@ -9,7 +9,7 @@ from time import time
 from collections import defaultdict, deque
 
 def create_painterly_maps_with_shared_texture(stroke_width_range=(8, 15), stroke_length_range=(20, 40), 
-                                            normal_angle_threshold=10.0):
+                                            normal_angle_threshold=10.0, color_variation=0.05):
     start_time = time()
     print("Starting painterly texture generation with shared texture cache...")
     
@@ -456,7 +456,7 @@ def create_painterly_maps_with_shared_texture(stroke_width_range=(8, 15), stroke
                     ])
                     
                     # Varied texture color with less variation for more consistency
-                    color_variation = np.random.uniform(-0.05, 0.05, 3)
+                    color_variation = np.random.uniform(-color_variation, color_variation, 3)
                     varied_color = np.array([
                         max(0.0, min(1.0, texture_color[0] + color_variation[0])),
                         max(0.0, min(1.0, texture_color[1] + color_variation[1])),
@@ -543,7 +543,7 @@ def create_painterly_maps_with_shared_texture(stroke_width_range=(8, 15), stroke
                     ])
                     
                     # More varied color for random strokes
-                    color_variation = np.random.uniform(-0.1, 0.1, 3)
+                    color_variation = np.random.uniform(-0.05, 0.05, 3)
                     varied_color = np.array([
                         max(0.0, min(1.0, texture_color[0] + color_variation[0])),
                         max(0.0, min(1.0, texture_color[1] + color_variation[1])),
@@ -847,5 +847,6 @@ def lines_intersect(p1, p2, p3, p4):
 create_painterly_maps_with_shared_texture(
     stroke_width_range=(8, 15),    # Thick strokes
     stroke_length_range=(20, 40),  # Long strokes
-    normal_angle_threshold=10.0    # Default 10 degrees for considering faces as part of the same region
+    normal_angle_threshold=10.0,    # Default 10 degrees for considering faces as part of the same region
+    color_variation=0.0
 )
