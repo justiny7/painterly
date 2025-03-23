@@ -39,8 +39,6 @@ Our solution combines several advanced techniques:
 
 We've created a sweet spot between fully manual texture painting and completely automated AI generation, giving artists the best of both worlds.
 
-![Project Overview](IMG_7275.png)
-
 ## ✨ Key Results
 Here are some examples of our painterly effects:
 
