@@ -543,7 +543,7 @@ def create_painterly_maps_with_shared_texture(stroke_width_range=(8, 15), stroke
                     ])
                     
                     # More varied color for random strokes
-                    color_variation = np.random.uniform(-0.05, 0.05, 3)
+                    color_variation = np.random.uniform(-color_variation, color_variation, 3)
                     varied_color = np.array([
                         max(0.0, min(1.0, texture_color[0] + color_variation[0])),
                         max(0.0, min(1.0, texture_color[1] + color_variation[1])),
