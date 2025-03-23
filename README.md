@@ -26,11 +26,9 @@ Our solution combines several advanced techniques:
 - **Contour-Guided System**: Uses mesh geometry and normal maps to guide stroke direction and density
 - **UV-Space Optimization**: Intelligent handling of UV space for consistent texture density
 - **Normal Map Enhancement**: Custom normal map generation for enhanced depth and detail
-- **Real-time Preview**: Efficient GPU-accelerated preview system for immediate feedback
 
 ### Key Technical Features
 1. **Smart Stroke Generation**
-   - Physics-based brush stroke simulation
    - Intelligent stroke placement based on surface features
    - Customizable stroke parameters (width, length, pressure, angle)
 
@@ -42,7 +40,6 @@ Our solution combines several advanced techniques:
 
 3. **Performance Optimization**
    - Efficient memory management
-   - Real-time preview system
 
 We've created a sweet spot between fully manual texture painting and completely automated AI generation, giving artists the best of both worlds.
 
@@ -65,22 +62,20 @@ Here are some examples of our painterly effects:
 ![Helmet Normal Map](results/painterly_helmet_color/normal_map_painterly.png)
 *Normal Map with Painterly Effect*
 
-### Elephant Model
+### Suzanne Model
 ![Suzanne Results](results/painterly_suzanne/color_map_painterly.png)
-*Classic Blender Elephant with Painterly Effect*
+*Classic Blender Suzanne with Painterly Effect*
 
 ## 🌟 Why Painterly?
-- 🚀 **Instant Artistic Transformation**: Convert standard 3D models into painterly masterpieces in minutes
+- 🚀 **Instant Artistic Transformation**: Convert standard 3D models into painterly masterpieces
 - 🎨 **Artist-Friendly Interface**: No programming knowledge required
 - 🛠️ **Professional-Grade Results**: Production-ready output with PBR workflow support
 - ⚡ **Efficient Workflow**: Reduce production time from days to minutes
-- 🔄 **Non-Destructive Editing**: Experiment freely with full undo support
 
 ## 🎮 Features
 
 ### Artistic Control
 - 🖌️ Customizable brush parameters for unique styles
-- 🎯 Precise control over stroke placement and density
 - 🌈 Enhanced normal maps for stunning 2.5D effects
 - 🔍 Detail preservation with intelligent stroke placement
 - 🧬 Seamless UV space handling
@@ -90,31 +85,6 @@ Here are some examples of our painterly effects:
 - 📐 Advanced normal map generation
 - 🔲 Smart edge detection and handling
 - 🎯 Object-aware stroke placement
-- 🔄 Batch processing support
-
-## 👩‍💻 Personal Contributions
-
-### Research and Development
-I conducted extensive research into texture generation approaches:
-- Evaluated existing AI solutions (BlenderMCP, Meshy.ai) and identified their limitations
-- Explored text-to-texture generation capabilities and their practical applications
-- Found that procedural approaches often provide better artistic control and consistent results
-- Validated our approach against current market solutions
-
-### Technical Implementation
-- Developed core Blender add-on infrastructure for seamless integration
-- Created an intuitive parameter system for brush customization
-- Implemented real-time preview functionality
-- Optimized texture generation pipeline for better performance
-
-### Comparative Analysis
-Through extensive testing, I found that while AI solutions like BlenderMCP and Meshy.ai offer interesting features, they often lack:
-- Consistent style maintenance across textures
-- Fine-grained artistic control
-- Predictable results
-- Real-time preview capabilities
-
-Our procedural approach provides better results in these areas, offering a sweet spot between manual painting and fully automated AI solutions.
 
 ### Lessons Learned
 - Discovered that combining traditional graphics techniques with modern tools yields superior results
