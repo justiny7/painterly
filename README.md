@@ -1,10 +1,10 @@
 # 🎨 Painterly — Kaedim Hackathon Project
 
 ## 🧩 Problem
-Translating unique 2D texture styles—such as painterly brush strokes—onto 3D models remains a technical and time-consuming task. Existing workflows require manual shader setups or programming-heavy solutions, creating a significant gap between artists and developers. Artists often rely on developers to implement their vision, leading to delays, misalignment, and creative compromises.
+Translating unique 2D texture styles—such as painterly brush strokes—onto 3D models remains a technical and time-consuming task. Existing workflows require manual shader setups or labor-intensive solutions, causing a significant bottleneck in 2.5D creation.
 
 ## 💡 Solution
-Painterly is a Blender add-on that bridges this gap by providing an intuitive interface for generating stylized, painterly effects on 3D models. It automatically generates and enhances normal maps and textures, creating a unique artistic style while maintaining the model's structural integrity.
+Painterly is a Blender add-on that aims to increase artist efficiency by providing an intuitive interface for generating stylized, painterly effects on 3D models. It automatically generates and enhances normal maps and textures, creating a unique painted style while maintaining the model's structural integrity.
 
 ## ✨ Key Features
 - 🎨 Customizable brush parameters
