@@ -13,11 +13,8 @@ Painterly is an innovative Blender add-on that bridges this gap by:
 - Algorithmically replicating the hand-painting process
 - Providing artist-friendly controls for consistent style
 - Maintaining the efficiency of automated solutions
-  
-<img width="1134" alt="IMG_7275" src="https://github.com/user-attachments/assets/73cf426d-5e23-4cc6-98e7-579b0ffb77e5" />
-<img width="872" alt="IMG_7960" src="https://github.com/user-attachments/assets/0d87ba92-f6d7-4ce9-98cf-79c07a4236b2" />
-<img width="954" alt="IMG_9067" src="https://github.com/user-attachments/assets/901a3265-2537-42fb-a2b4-2d948da365ab" />
-<img width="775" alt="IMG_9110" src="https://github.com/user-attachments/assets/64621d80-cba3-438d-a7ba-fc565f7b37e6" />
+
+https://github.com/user-attachments/assets/e2039415-30d8-4ba4-a15b-5d0f29d899f6
 
 ### Technical Approach
 Our solution combines several advanced techniques:
