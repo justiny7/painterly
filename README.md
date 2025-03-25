@@ -72,7 +72,7 @@ Here are some examples of our painterly effects:
 ## 🚀 Getting Started
 
 ### Installation
-1. Clone repository and zip /painterly directory OR download painterly.zip
+1. Clone repository and zip /painterly directory
 2. In Blender:
    - Navigate to Edit > Preferences > Add-ons
    - Click "Install" and select the downloaded `painterly.zip`
